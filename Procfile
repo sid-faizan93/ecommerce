@@ -1,0 +1,1 @@
+web: java -jar sprint-boot-ecommerce/target/sprint-boot-ecommerce-0.0.1-SNAPSHOT.jar

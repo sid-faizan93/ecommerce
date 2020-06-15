@@ -13,7 +13,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>sprint-boot-ecommerce</name>
 	<description>Spring Boot Ecommerce</description>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 
 	<properties>
 		<java.version>1.8</java.version>
@@ -43,7 +43,7 @@
 			<groupId>com.fullstackapp</groupId>
 			<artifactId>frontend</artifactId>
 			<version>${project.version}</version>
-			<scope>runtime</scope>
+			<!--scope>runtime</scope-->
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -64,35 +64,8 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-			<plugin>
-				<artifactId>maven-war-plugin</artifactId>
-				<version>3.2.0</version>
-				<configuration>
-					<webResources>
-						<resource>
-							<directory>../sprint-boot-ecommerce/target</directory>
-						</resource>
-					</webResources>
-				</configuration>
-			</plugin>
-			<plugin>
-				<artifactId>maven-resources-plugin</artifactId>
-				<executions>
-					<execution>
-						<id>copy-resources</id>
-						<phase>validate</phase>
-						<goals><goal>copy-resources</goal></goals>
-						<configuration>
-							<outputDirectory>${build.directory}/classes/static/</outputDirectory >
-							<resources>
-								<resource>
-									<directory>../frontend/src/main/angular-ecommerce/dist/angular-ecommerce</directory>
-								</resource>
-							</resources>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
+			
+			
 		</plugins>
 	</build>
 
